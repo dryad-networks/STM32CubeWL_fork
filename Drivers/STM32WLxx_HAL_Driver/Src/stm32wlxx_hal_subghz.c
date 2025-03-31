@@ -1236,7 +1236,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->TxCpltCallback(hsubghz);
 #else
-    HAL_SUBGHZ_TxCpltCallback(hsubghz);
+    DRD_HAL_SUBGHZ_TxCpltCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1246,7 +1246,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->RxCpltCallback(hsubghz);
 #else
-    HAL_SUBGHZ_RxCpltCallback(hsubghz);
+    DRD_HAL_SUBGHZ_RxCpltCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1256,7 +1256,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->PreambleDetectedCallback(hsubghz);
 #else
-    HAL_SUBGHZ_PreambleDetectedCallback(hsubghz);
+    DRD_HAL_SUBGHZ_PreambleDetectedCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1266,7 +1266,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->SyncWordValidCallback(hsubghz);
 #else
-    HAL_SUBGHZ_SyncWordValidCallback(hsubghz);
+    DRD_HAL_SUBGHZ_SyncWordValidCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1276,7 +1276,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->HeaderValidCallback(hsubghz);
 #else
-    HAL_SUBGHZ_HeaderValidCallback(hsubghz);
+    DRD_HAL_SUBGHZ_HeaderValidCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1286,7 +1286,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->HeaderErrorCallback(hsubghz);
 #else
-    HAL_SUBGHZ_HeaderErrorCallback(hsubghz);
+    DRD_HAL_SUBGHZ_HeaderErrorCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1296,7 +1296,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->CRCErrorCallback(hsubghz);
 #else
-    HAL_SUBGHZ_CRCErrorCallback(hsubghz);
+    DRD_HAL_SUBGHZ_CRCErrorCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
@@ -1317,11 +1317,11 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
     /* Channel activity Detected Interrupt */
     if (SUBGHZ_CHECK_IT_SOURCE(itsource, SUBGHZ_IT_CAD_ACTIVITY_DETECTED) != RESET)
     {
-      HAL_SUBGHZ_CADStatusCallback(hsubghz, HAL_SUBGHZ_CAD_DETECTED);
+    	DRD_HAL_SUBGHZ_CADStatusCallback(hsubghz, HAL_SUBGHZ_CAD_DETECTED);
     }
     else
     {
-      HAL_SUBGHZ_CADStatusCallback(hsubghz, HAL_SUBGHZ_CAD_CLEAR);
+    	DRD_HAL_SUBGHZ_CADStatusCallback(hsubghz, HAL_SUBGHZ_CAD_CLEAR);
     }
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
@@ -1332,7 +1332,7 @@ void HAL_SUBGHZ_IRQHandler(SUBGHZ_HandleTypeDef *hsubghz)
 #if (USE_HAL_SUBGHZ_REGISTER_CALLBACKS == 1U)
     hsubghz->RxTxTimeoutCallback(hsubghz);
 #else
-    HAL_SUBGHZ_RxTxTimeoutCallback(hsubghz);
+    DRD_HAL_SUBGHZ_RxTxTimeoutCallback(hsubghz);
 #endif /* USE_HAL_SUBGHZ_REGISTER_CALLBACKS */
   }
 
