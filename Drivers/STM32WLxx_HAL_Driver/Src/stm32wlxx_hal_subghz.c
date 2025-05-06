@@ -181,6 +181,16 @@ HAL_StatusTypeDef SUBGHZ_CheckDeviceReady(SUBGHZ_HandleTypeDef *hsubghz);
 /** @defgroup SUBGHZ_Exported_Functions SUBGHZ Exported Functions
   * @{
   */
+extern void HAL_SUBGHZ_TxCpltCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_RxCpltCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_PreambleDetectedCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_SyncWordValidCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_HeaderValidCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_HeaderErrorCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_CRCErrorCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_CADStatusCallback(SUBGHZ_HandleTypeDef *hsubghz, HAL_SUBGHZ_CadStatusTypeDef cadstatus);
+extern void HAL_SUBGHZ_RxTxTimeoutCallback(SUBGHZ_HandleTypeDef *hsubghz);
+extern void HAL_SUBGHZ_LrFhssHopCallback(SUBGHZ_HandleTypeDef *hsubghz);
 
 /** @defgroup SUBGHZ_Exported_Functions_Group1 Initialization and de-initialization functions
   *  @brief    Initialization and Configuration functions

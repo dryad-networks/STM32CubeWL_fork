@@ -390,7 +390,7 @@ void DRD_HAL_SUBGHZ_HeaderErrorCallback(SUBGHZ_HandleTypeDef *hsubghz);
 void DRD_HAL_SUBGHZ_CRCErrorCallback(SUBGHZ_HandleTypeDef *hsubghz);
 void DRD_HAL_SUBGHZ_CADStatusCallback(SUBGHZ_HandleTypeDef *hsubghz, HAL_SUBGHZ_CadStatusTypeDef cadstatus);
 void DRD_HAL_SUBGHZ_RxTxTimeoutCallback(SUBGHZ_HandleTypeDef *hsubghz);
-void HAL_SUBGHZ_LrFhssHopCallback(SUBGHZ_HandleTypeDef *hsubghz);
+void DRD_HAL_SUBGHZ_LrFhssHopCallback(SUBGHZ_HandleTypeDef *hsubghz);
 /**
   * @}
   */
